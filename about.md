@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+感谢关注我的博客 [zcq100.com](https://blog.zcq100.com/)
 
-You can find the source code for the Jekyll new theme at:
+你可以从这里找到我使用的主题:
 {% include icon-github.html username="jekyll" %} /
 [minima](https://github.com/jekyll/minima)
 
-You can find the source code for Jekyll at
+主题的代码：
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll)
