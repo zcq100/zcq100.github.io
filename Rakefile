@@ -98,9 +98,10 @@ end
 
 desc "提交文章"
 task :post do
-`git add .`
-`git commit -m 'public'`
-`git push`
-puts "完成.."
-
+   exec "git add ."
+   exec "git commit -m 'publish'"
+   exec "git push"
+   puts "完成.."
 end
+
+
