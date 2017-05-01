@@ -95,3 +95,13 @@ task :newpage, :title do |t, args|
    post.puts "---"
  end
 end
+
+desc "提交文章"
+task :post do
+   exec "git add ."
+   exec "git commit -m 'publish'"
+   exec "git push"
+   puts "完成.."
+end
+
+
