@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用Jekyll+GitHub搭建博客"
+title:  "使用GitHub搭建Jekyll博客"
 date:   2017-04-28 13:57:32 +0800
 categories: jekyll
 ---

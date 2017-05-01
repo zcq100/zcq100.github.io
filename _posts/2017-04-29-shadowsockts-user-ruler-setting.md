@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "shadowsockts user-ruler setting"
+title: "ShadowSocks用户规则设置"
 description: 
 headline: 
 modified: 2017-04-29
