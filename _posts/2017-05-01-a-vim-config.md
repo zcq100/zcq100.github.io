@@ -5,7 +5,7 @@ description:
 headline: 
 modified: 2017-05-01 23:06:10 +0800
 category: personal
-tags: [:vim]
+tags: ["vim"]
 image: 
   feature: 
 comments: true
