@@ -11,16 +11,17 @@ image:
 comments: true
 mathjax: 
 ---
+
 ![image1](images/20170501-01.jpg)
 
 # 1. 清除默认样式 
 
 ```
-	*{
-	margin:0; 
-	padding:0; 
-	font-size:12px;
-	} 
+*{
+margin:0; 
+padding:0; 
+font-size:12px;
+} 
 ```
 # 2. body的背景 
 ```body{background-color:??;} ```
