@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ShadowSocks用户规则设置"
+title: "Shadowsocks用户规则设置"
 description: 
 headline: 
 modified: 2017-04-29
@@ -12,7 +12,7 @@ comments: true
 mathjax: 
 ---
 
-## Window
+## Windows
 
 最新版本的shadowsocks支持用户自定义代理规则，更新到最新的版本的shadowsocks后， 在shadowsocks文件夹内会有一个user-rule.txt文档，如果用户需要添加自定义代理规则，只需要编辑user-rule.txt文件。
 
@@ -55,8 +55,8 @@ Linux下设置代理稍微麻烦点。火狐浏览器建议安装FoxyPoxy插件�
 - centos   安装pacgen： ```sudo yum install pacgen```
 
 
-```
+{% highlight shell %}
 #! /bin/bash
 genpac --pac-proxy "SOCKS 127.0.0.1:1080" --user-rule-from ./user-rule -o ./gwflist.pac
 echo "gwflist.pac 生成成功"
-```
+{% endhighlight %}

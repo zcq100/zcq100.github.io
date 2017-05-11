@@ -23,7 +23,10 @@ github_username:  zcq100
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
+excerpt_separator: ""
+
 gems:
   - jekyll-feed
 exclude:

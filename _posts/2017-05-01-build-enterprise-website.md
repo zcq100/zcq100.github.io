@@ -16,7 +16,7 @@ mathjax:
 
 # 1. 清除默认样式 
 
-```
+```css
 *{
 margin:0; 
 padding:0; 
@@ -113,14 +113,14 @@ background-position:right center;
 * ④利用margin设置各列的间距
 
 #7.1 三列布局
-```
+```css
 .left{width:340px; }
 .mid{width:410px; margin:0 7px;}
 .right{width:230px;}
 .left,.mid,.right{float:left;}
 ```
 #7.2 两列布局
-```html
+```css
 .content{height:350px; margin-top:10px;}
 
 .content_left{width:220px; /*height:350px;*/ /*不应该设置固定高度*/ min-height:350px; _height:350px; /* For IE6*/  float:left;}
@@ -132,7 +132,7 @@ background-position:right center;
 * 8.1 解决新闻列表的时间在IE中的错位： 将日期放在新闻标题的前面，就可以解决 
 * 8.2 新闻列表的页码
 
-```
+```css
 .page{height:40px; margin-top:10px; text-align:center;}
 .page a{display:inline-block; /*将a设置为既能在同一行显示，又能设置宽度 高度等*/ border:1px solid #E8E8E8; text-decoration:none; margin:5px; padding:5px 10px;}
 .page a:link,.page a:visited{color:#000;}
@@ -178,7 +178,7 @@ img{vertical-align:middle;}<!--使文字旁的图片与文字对齐-->
 ```
 * ②链接格式：
 
-```
+```css
 a{text-decoration:none;}<!--去除链接的默认样式-->
 a:link,a:visited{}
 a:hover,a:active{}

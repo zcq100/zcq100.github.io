@@ -12,7 +12,7 @@ comments: true
 mathjax: 
 ---
 
-```
+{% highlight VimL %}
 
 set enc=utf-8
 set nocompatible              " be iMproved, required
@@ -168,4 +168,4 @@ let g:vim_markdown_folding_disabled = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-```
+{% endhighlight %}
