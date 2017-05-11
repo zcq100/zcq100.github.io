@@ -3,6 +3,7 @@ layout: post
 title:  "docker!"
 date:   2017-04-28 10:57:32 +0800
 categories: docker
+comments: true
 ---
 ## Docker
 
