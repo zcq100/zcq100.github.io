@@ -34,3 +34,7 @@ exclude:
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%Y年 %m月 %d日"
+
+disqus:
+  shortname: zcq100-1
+
