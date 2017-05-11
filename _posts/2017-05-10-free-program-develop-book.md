@@ -686,4 +686,4 @@ mathjax:
 * [Visual Prolog 7边练边学](http://wiki.visual-prolog.com/index.php?title=Visual_Prolog_for_Tyros_in_Chinese)
 
 
-[link](https://github.com/vhf/free-programming-books/edit/master/free-programming-books-zh.md)
+### [Link](https://github.com/vhf/free-programming-books/edit/master/free-programming-books-zh.md)
