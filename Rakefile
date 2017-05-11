@@ -2,7 +2,7 @@
 # usage rake new_post['My New Post'] or rake new_post (defaults to "My New Post")
 desc "Start a new post"
 task :new, :title do |t, args|
- args.with_defaults(:title => 'My New Post')
+ args.with_defaults(:title : 'My New Post')
  title = args.title
  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.md"
  puts "Creating new post: #{filename}"
@@ -25,7 +25,7 @@ end
 
 desc "Start a new quote"
 task :newquote, :title do |t, args|
- args.with_defaults(:title => 'My New quote')
+ args.with_defaults(:title : 'My New quote')
  title = args.title
  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.md"
  puts "Creating new post: #{filename}"
