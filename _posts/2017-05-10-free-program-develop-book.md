@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "开发资料整理"
 description: 
 headline: 

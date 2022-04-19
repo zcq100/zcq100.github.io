@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "给我发一封GPG邮件吧"
 description: 
 headline: 
