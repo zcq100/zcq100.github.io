@@ -1,6 +1,6 @@
 ---
 title: sed命令使用
-categories: shell linux
+tags: ['shell','linux']
 ---
 
 Linux sed 命令是利用脚本来处理文本文件。

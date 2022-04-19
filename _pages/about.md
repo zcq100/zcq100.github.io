@@ -5,8 +5,6 @@ permalink: /about/
 author_profile: true
 ---
 
-没有更多信息
-
 你可以用 [邮件](mailto:m@zcq100.com) 联系我
 
 我使用的框架和主题：
