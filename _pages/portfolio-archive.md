@@ -5,4 +5,3 @@ permalink: /portfolio/
 collection: portfolio
 entries_layout: grid
 ---
-sss

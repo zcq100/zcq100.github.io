@@ -15,12 +15,16 @@
 # in the templates via {{ site.myvariable }}.
 locale: 'zh-CN'
 title: zcq100
+# masthead_title: "My Custom Title"
 email: m@zcq100.com
 github_username:  zcq100
 url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 description: > 
   This is my blog
+
+
+include: ["_pages"]
 
 
 #默认值
@@ -35,31 +39,61 @@ defaults:
       read_time: true
       share: true
       comments: true
+      related: true
+      author_profile: true
+
   # tags
   - scope:
       path: ""
       type: tag
     values:
       author_profile: true
-  - scope:
-      path: ""
-      type: category
-    values:
       comments: false
 
+  # pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      comments: false
 
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
 jekyll-archives:
-  enabled: all
-  layout: archive
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tags: '/tag/:name/'
-    categories: '/category/:name/'
+    category: /categories/:name/
+    tag: /tags/:name/
+
 
 date_format: "%Y-%m-%d"
 timezone: Asia/Shang_Hai
+search: true
+
+
+author:
+  name     : "Eric Z"
+  avatar   : "/assets/images/avatar.jpg"
+  bio      : "My awesome biography constrained to a sentence or two goes here."
+  location : "Chongqing, China"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zcq100"
+
 
 #html压缩？
 # compress_html:
@@ -67,16 +101,17 @@ timezone: Asia/Shang_Hai
 #   ignore:
     # envs: development  # disable compression in dev environment
 
-# Build settings
-# markdown: kramdown
-# highlighter: rouge
 # theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-excerpt_separator: ""
-paginate: 5
-paginate_path: "/blog/page:num/"
-
 minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+
+# excerpt_separator: ""
+
+#分页
+paginate: 5
+paginate_path: "/page:num/"
+
 
 plugins:
   - jekyll-feed
