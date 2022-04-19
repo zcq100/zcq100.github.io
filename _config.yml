@@ -22,15 +22,18 @@ url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g
 github_username:  zcq100
 
 # Build settings
-markdown: kramdown
-highlighter: rouge
+# markdown: kramdown
+# highlighter: rouge
 # theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 excerpt_separator: ""
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.

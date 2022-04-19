@@ -24,9 +24,9 @@ group :jekyll_plugins do
   gem 'jekyll-gist'
   gem 'jekyll-include-cache'
   gem 'jekyll-paginate'
-  gem 'jekyll-watch'
-  gem 'kramdown'
-  gem 'rouge'
+  # gem 'jekyll-watch'
+  # gem 'kramdown'
+  # gem 'rouge'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
