@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "Shadowsocks用户规则配置"
 description: 
 headline: 
@@ -8,7 +7,6 @@ category: personal
 tags: []
 image: 
   feature: 
-comments: true
 mathjax: 
 ---
 

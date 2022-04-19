@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "开发资料整理"
 description: 
 headline: 
@@ -8,7 +7,7 @@ category: personal
 tags: []
 image: 
   feature: 
-comments: true
+toc: true
 mathjax: 
 ---
 

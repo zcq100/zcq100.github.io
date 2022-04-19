@@ -104,9 +104,10 @@ task :newpage, :title do |_t, args|
 end
 
 desc '提交文章'
-task :post do
-  exec 'git add .'
-  exec "git commit -m 'publish'"
-  exec 'git push'
-  puts '完成..'
+task :submit_to_github do
+end
+
+desc 'jekyll 清理&&生成'
+task :rebuild do
+  exec 'jekyll clean&&jekyll build'
 end

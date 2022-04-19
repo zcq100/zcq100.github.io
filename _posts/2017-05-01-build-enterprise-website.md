@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "Web Css"
 description: 
 headline: 
@@ -8,7 +7,6 @@ category: personal
 tags: ["html","js"]
 image: 
   feature: 
-comments: true
 mathjax: 
 ---
 

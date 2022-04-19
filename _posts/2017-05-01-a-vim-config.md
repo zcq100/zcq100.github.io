@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "vim配置文件"
 description: 
 headline: 
@@ -8,7 +7,6 @@ category: personal
 tags: ["vim"]
 image: 
   feature: 
-comments: true
 mathjax: 
 ---
 

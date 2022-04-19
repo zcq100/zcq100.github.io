@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "在国产安卓手机上安装google框架"
 description: 
 headline: 
@@ -8,7 +7,6 @@ category: personal
 tags: []
 image: 
   feature: 
-comments: true
 mathjax: 
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "给我发一封GPG邮件吧"
 description: 
 headline: 
@@ -8,7 +7,6 @@ category: personal
 tags: []
 image: 
   feature: 
-comments: true
 mathjax: 
 ---
 如果你刚了解或者知道怎么发送加密邮件，那么请给我发一封邮件吧。

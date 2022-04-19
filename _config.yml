@@ -13,13 +13,59 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+locale: 'zh-CN'
 title: zcq100
 email: m@zcq100.com
+github_username:  zcq100
+url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 description: > 
   This is my blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  zcq100
+
+
+#默认值
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
+      read_time: true
+      share: true
+      comments: true
+  # tags
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tags: '/tag/:name/'
+    categories: '/category/:name/'
+
+date_format: "%Y-%m-%d"
+timezone: Asia/Shang_Hai
+
+#html压缩？
+# compress_html:
+#   clippings: all
+#   ignore:
+    # envs: development  # disable compression in dev environment
 
 # Build settings
 # markdown: kramdown
@@ -30,10 +76,13 @@ excerpt_separator: ""
 paginate: 5
 paginate_path: "/blog/page:num/"
 
+minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
