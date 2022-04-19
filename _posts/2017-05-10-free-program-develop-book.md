@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "程序开发资料整理"
+title: "开发资料整理"
 description: 
 headline: 
 modified: 2017-05-10 23:25:25 +0800

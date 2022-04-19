@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Shadowsocks用户规则设置"
+title: "Shadowsocks用户规则配置"
 description: 
 headline: 
 modified: 2017-04-29
