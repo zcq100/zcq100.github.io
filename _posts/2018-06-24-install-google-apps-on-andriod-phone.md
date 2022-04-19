@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在国产安卓手机上安装google套件"
+title: "在国产安卓手机上安装google框架"
 description: 
 headline: 
 modified: 2018-06-24 17:08:36 +0800

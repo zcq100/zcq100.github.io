@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "企业网站的基本布局"
+title: "Web Css"
 description: 
 headline: 
 modified: 2017-05-01
@@ -12,7 +12,7 @@ comments: true
 mathjax: 
 ---
 
-![image1](/images/20170501-01.jpg)
+![image1](images/20170501-01.jpg)
 
 # 1. 清除默认样式 
 
