@@ -22,6 +22,7 @@ gem 'minimal-mistakes-jekyll'
 group :jekyll_plugins do
   gem 'github-pages'
   gem 'jekyll-gist'
+  gem 'jekyll-include-cache'
   gem 'jekyll-paginate'
   gem 'jekyll-watch'
   gem 'kramdown'
@@ -30,4 +31,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
