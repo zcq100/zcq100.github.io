@@ -1,46 +1,47 @@
 ---
-title: 使用photoprism管理照片
+title: 使用Photoprism管理照片
 tags: ['docker','NAS']
 category: personal
 ---
 
-Emby可以管理电影和视频，那在NAS上管理照片用什么好呢? 
+Emby可以管理电影和视频，那么在NAS上管理照片用什么好呢? 
 
-如果是群晖，可以选择DS photo和moments，其他NAS和linux用户，可以试试开源的photoprism。
+如果是群晖，可以选择DS Photo 和 moments，其他NAS和linux用户，可以试试开源的*photoprism*。
 
 ![Photoprism](https://docs.photoprism.app/img/preview.jpg)
 
 + [官方演示](https://try.photoprism.app/)
 + [安装使用](https://docs.photoprism.app/)
 
-## 功能概述¶
+## 功能介绍¶
 
-- 浏览所有照片和视频，无需担心RAW 转换、重复或视频格式
-使用强大的搜索过滤器轻松查找特定图片
-- 隐私友好：除非您明确将文件上传到其中一项服务，否则不会向 Google、Amazon、Facebook 或 Apple 发送任何数据🔐
-- 识别您的家人和朋友的面孔
-- 根据内容和位置自动分类图片
+- 浏览照片和视频，无需操心 RAW转换、视频格式和文件重复
+- 使用强大的搜索过滤器，轻松查找特定图片
+- 隐私保护：除非您明确选择上传，否则不会向 Google、Amazon、Facebook 或 Apple 发送任何数据🔐
+- 自动识别 家人 和 朋友 的面孔，根据 内容 和 位置 自动归类图片
 - 通过将鼠标悬停在相册和搜索结果中来播放实况照片
 - 由于用户界面是一个 Progressive Web App，提供原生应用般的体验，您可以方便地将其 安装在所有主流操作系统和移动设备的主屏幕上
 - 自带 4 张高分辨率世界地图，给您带来最美好的旅行的回忆
 - 从 Exif、XMP 和其他来源（例如 Google 照片）中提取和合并 元数据
 - 还可以搜索更多图像属性，例如Colors、Chroma和Quality
 - 在 iOS 和 Android 上采用 PhotoSync 在后台安全备份
-- WebDAV 客户端（例如 Microsoft 的 Windows Explorer 和 Apple 的 Finder）可以直接连接到 PhotoPrism，让您可以像在本地一样打开、编辑和删除计算机中的文件
+- 支持 WebDAV 客户端（例如 Microsoft 的 Windows Explorer 和 Apple 的 Finder）可以直接连接到 PhotoPrism，让您可以像在本地一样打开、编辑和删除计算机中的文件
 
 
 
 ## 安装部署
 
-这里介绍docker的部署。这里使用的 [官方镜像](https://hub.docker.com/r/photoprism/photoprism) 
+这里介绍在 Docker 上的部署。使用的 [官方镜像](https://hub.docker.com/r/photoprism/photoprism) 
 
 ```shell
 docker pull photoprism/photoprism
 ```
+### 注意事项
 
-目录挂载要注意，/photoprism/originals是存放照片的根目录，所有挂载的 相册和上传的文件都会挂载这个目录下。/photoprism/storage，是存放检索的数据库，各种缓存。如果不希望每次进去相册都是一片空白的话，请记得挂载这两个目录。
++ /photoprism/originals， 是存放照片的根目录，所有添加的 相册 和 上传的文件 都会挂载这个目录下。
++ /photoprism/storage，是存放检索的数据库，各种缓存。如果不希望每次更新容器，进去相册都是一片空白的话，请记得挂载这两个目录。
 
-项目自带sqlite数据库，照片不多的情况下可以勉强使用，正式环境建议使用单独的数据库，比如mysql和mariadb，官方推荐mariadb。
++ 项目自带 sqlite 数据库，照片不多的情况下可以勉强使用，正式环境建议使用独立的数据库，比如 mysql 和 mariadb(官方推荐)。
 
 ### 直接以命令方式部署
 
@@ -175,6 +176,12 @@ services:
 
 ## 使用体验
 
-浏览体验还是不错，导入时候的操作比较多，又是生成缩略图又是图片识别的，非常慢，对性能和内存要求高。我一次性导入几百个G的手机照片和视频，直接服务器没有反应。
+整体操作还是不错。导入时需要处理的步骤比较多，又是生成缩略图又是图片识别的，非常慢，对性能和内存要求高。我一次性导入几百个G的手机照片和视频，没有限制cpu和内存配额，服务器直接干得没有响应。
+
+AI识别的准确率有点低，分类和人脸很多错乱。
 
 不支持多用户，只能自己一个人用，分享控制不方便。但是数据库里面的表看上去是准备搞多用户的，社区版不知道是否会得到支持。
+
+缺少2FA，authy的支持。
+
+没有官方的手机同步软件，依赖第三方的PhotoSync(收费)。
