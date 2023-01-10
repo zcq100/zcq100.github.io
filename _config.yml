@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: 'zh-CN'
-title: zcq100
+title: @-@
 # masthead_title: "My Custom Title"
 email: m@zcq100.com
 github_username:  zcq100
@@ -22,7 +22,6 @@ url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g
 baseurl: "" # the subpath of your site, e.g. /blog
 description: > 
   This is my blog
-
 
 include: ["_pages"]
 
@@ -83,10 +82,10 @@ search: true
 
 
 author:
-  name     : "Eric Z"
+  name     : "zcq100"
   avatar   : "/assets/images/avatar.jpg"
   bio      : "My awesome biography constrained to a sentence or two goes here."
-  location : "Chongqing, China"
+  location : "China"
 
 footer:
   links:

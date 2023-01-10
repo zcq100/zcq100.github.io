@@ -392,7 +392,7 @@ zh: &DEFAULT_ZH_HANS
   less_than                  : "少于"
   minute_read                : "分钟阅读"
   share_on_label             : "分享"
-  meta_label                 :
+  meta_label                 : 
   tags_label                 : "标签:"
   categories_label           : "分类:"
   date_label                 : "更新时间:"
