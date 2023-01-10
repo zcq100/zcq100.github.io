@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: 'zh-CN'
-title: @-@
+title: '@-@'
 # masthead_title: "My Custom Title"
 email: m@zcq100.com
 github_username:  zcq100
