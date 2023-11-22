@@ -26,3 +26,21 @@ exiftool -d "%Y/%m" "-directory<createdate" -r .
 ```shell
 exiftool -d "%Y/%m" "-directory<filemodifydate" -r .
 ```
+
+# 其他应用
+
+### 通过元素据检索文件
+
+```
+找出所有苹果手机拍摄的照片
+exiftool -FileName -if '$LensId =~ /iphone/i' -r .
+找出所有苹果手机拍摄的照片，并将元素据写入txt
+exiftool -if '$LensId =~ /iphone/i' -r . > info.txt
+遍历子目录，找出所有 有GPS信息的,文件扩展名是jpg的照片，并将元素据写入txt
+exiftool -if '$GPSPosition =~ /.*/' -ext jpg -r . > info.txt
+```
+
++ Date/Time Original  照片的原始时间
++ Create Date  照片的创建时间
++ GPSPosition  GPS信息
++ ...
