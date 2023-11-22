@@ -79,17 +79,21 @@ Megapixels                      : 12.2
 
 -FileName 和 -Directory是两个特殊属性，修改该属性，会变更实际文件目录和文件名。
 
-修改文件名称，根据时间和自定义的格式命名文件。
+### 根据元素 重命名文件。
 ```
-#dryrun测试模式
-
--> exiftool '-testname<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg original_file_name.jpg 
-'4944107950309404_02.jpg' --> 'IMG_20231122.jpg'
+# dryrun测试模式
+-> exiftool '-testname<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" original_file_name.jpg 
+'original_file_name.jpg' --> 'IMG_20231122.jpg'
     0 image files updated
     1 image files unchanged
 
-# 这里就会发生修改
--> exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg -r .
+# 这里会发生实际修改
+# %%e 会自动补全文件扩展名
+# %%c 会自动计数，防止重名
+# -ext jpg 限定文件扩展名
+# -r 递归子目录
+-> exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d_%%c.%%e" -ext jpg -r .
+```
 ```
 
 
