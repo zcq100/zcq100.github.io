@@ -47,6 +47,11 @@ Y Resolution                    : 1
 Image Size                      : 4032x3024
 Megapixels                      : 12.2
 ```
++ Date/Time Original  照片的原始时间
++ Create Date  照片的创建时间
++ GPSPosition  GPS信息
++ ...
+  
 
 从上面的图片exif信息，可以找到拍摄日期：
 
@@ -64,16 +69,30 @@ exiftool -d "%Y/%m" "-directory<filemodifydate" -r .
 ```
 找出所有苹果手机拍摄的照片
 exiftool -FileName -if '$LensId =~ /iphone/i' -r .
+
 找出所有苹果手机拍摄的照片，并将元素据写入txt
 exiftool -if '$LensId =~ /iphone/i' -r . > info.txt
+
 遍历子目录，找出所有 有GPS信息的,文件扩展名是jpg的照片，并将元素据写入txt
 exiftool -if '$GPSPosition =~ /.*/' -ext jpg -r . > info.txt
 ```
 
-+ Date/Time Original  照片的原始时间
-+ Create Date  照片的创建时间
-+ GPSPosition  GPS信息
-+ ...
+-FileName 和 -Directory是两个特殊属性，修改该属性，会变更实际文件目录和文件名。
+
+修改文件名称，根据时间和自定义的格式命名文件。
+```
+#dryrun测试模式
+
+exiftool '-testname<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg original_file_name.jpg 
+'4944107950309404_02.jpg' --> 'IMG_20231122.jpg'
+    0 image files updated
+    1 image files unchanged
+
+# 这里就会发生修改
+exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg -r .
+```
+
+
 
 # 参考
 
