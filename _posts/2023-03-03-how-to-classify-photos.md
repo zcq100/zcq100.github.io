@@ -94,8 +94,11 @@ Megapixels                      : 12.2
 # -r 递归子目录
 -> exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d_%%c.%%e" -ext jpg -r .
 ```
-```
 
+找码率20Mbps以上的视频文件
+```
+exiftool -if '$AvgBitrate ge "3 Mbps"' -r -ext mp4 .
+```
 
 
 # 参考
