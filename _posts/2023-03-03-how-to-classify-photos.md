@@ -56,25 +56,25 @@ Megapixels                      : 12.2
 从上面的图片exif信息，可以找到拍摄日期：
 
 ```shell
-exiftool -d "%Y/%m" "-directory<createdate" -r .
+-> exiftool -d "%Y/%m" "-directory<createdate" -r .
 ```
 其他的图片，比如截图，APP转存的，会被剔除部分exif信息，可能没有createdate属性，那么可以根据文件的修改日期再整理一遍。
 
 ```shell
-exiftool -d "%Y/%m" "-directory<filemodifydate" -r .
+-> exiftool -d "%Y/%m" "-directory<filemodifydate" -r .
 ```
 
 ## 通过元素据检索文件
 
 ```
 找出所有苹果手机拍摄的照片
-exiftool -FileName -if '$LensId =~ /iphone/i' -r .
+-> exiftool -FileName -if '$LensId =~ /iphone/i' -r .
 
 找出所有苹果手机拍摄的照片，并将元素据写入txt
-exiftool -if '$LensId =~ /iphone/i' -r . > info.txt
+-> exiftool -if '$LensId =~ /iphone/i' -r . > info.txt
 
 遍历子目录，找出所有 有GPS信息的,文件扩展名是jpg的照片，并将元素据写入txt
-exiftool -if '$GPSPosition =~ /.*/' -ext jpg -r . > info.txt
+-> exiftool -if '$GPSPosition =~ /.*/' -ext jpg -r . > info.txt
 ```
 
 -FileName 和 -Directory是两个特殊属性，修改该属性，会变更实际文件目录和文件名。
@@ -83,13 +83,13 @@ exiftool -if '$GPSPosition =~ /.*/' -ext jpg -r . > info.txt
 ```
 #dryrun测试模式
 
-exiftool '-testname<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg original_file_name.jpg 
+-> exiftool '-testname<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg original_file_name.jpg 
 '4944107950309404_02.jpg' --> 'IMG_20231122.jpg'
     0 image files updated
     1 image files unchanged
 
 # 这里就会发生修改
-exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg -r .
+-> exiftool '-FileName<${FileAccessDate}' -d "IMG_%Y%m%d.%%e" -ext jpg -r .
 ```
 
 
