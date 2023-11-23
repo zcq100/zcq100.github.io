@@ -97,7 +97,7 @@ Megapixels                      : 12.2
 
 找码率20Mbps以上的视频文件
 ```
-exiftool -if '$AvgBitrate ge "3 Mbps"' -r -ext mp4 .
+exiftool -if '${AvgBitrate#} >= 20000000' -r -ext mp4 .
 ```
 
 
