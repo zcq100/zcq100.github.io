@@ -1,0 +1,102 @@
+baseURL = "https://blog.zcq100.com/"
+languageCode = "zh-CN"
+title = "zcq100技术博客"
+theme = "PaperMod"
+timeZone = "Asia/Shanghai"
+defaultContentLanguage = "zh-CN"
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 120
+paginate = 10
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  title = "zcq100技术博客"
+  description = "Python、Linux、Docker、AI开发、网络与自动化运维实践"
+  keywords = ["Python", "Linux", "Docker", "AI开发", "自动化运维", "技术博客"]
+  author = "zcq100"
+  DateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  UseHugoToc = true
+  comments = false
+  images = ["/images/avatar.jpg"]
+
+[params.assets]
+  favicon = "/favorite.ico"
+  favicon16x16 = "/favorite.ico"
+  favicon32x32 = "/favorite.ico"
+  apple_touch_icon = "/favorite.ico"
+
+[params.homeInfoParams]
+  Title = "zcq100技术博客"
+  Content = "Python、Linux、Docker、AI开发、网络与自动化运维实践。"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/zcq100"
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 50
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
