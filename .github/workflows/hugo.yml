@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - migration/hugo-papermod
   workflow_dispatch:
 
 permissions:
