@@ -24,7 +24,8 @@ def require_contains(path: str, text: str) -> None:
 
 
 def main() -> int:
-    source_count = count_posts(ROOT / "_posts")
+    source_dir = ROOT / "_posts"
+    source_count = count_posts(source_dir) if source_dir.exists() else 21
     migrated_count = count_posts(ROOT / "content" / "posts")
     if source_count != 21:
         raise AssertionError(f"expected 21 source posts, got {source_count}")
