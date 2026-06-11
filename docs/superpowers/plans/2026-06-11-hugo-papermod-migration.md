@@ -154,7 +154,7 @@ Expected: `.gitmodules` and `themes/PaperMod` are created.
 Create `hugo.toml` with this content:
 
 ```toml
-baseURL = "https://blog.zcq100.com/"
+baseURL = "https://pages.zcq100.com/"
 languageCode = "zh-CN"
 title = "zcq100技术博客"
 theme = "PaperMod"
@@ -266,7 +266,7 @@ Run:
 hugo config | grep -E 'theme|baseURL|title'
 ```
 
-Expected output includes `PaperMod`, `https://blog.zcq100.com/`, and `zcq100技术博客`.
+Expected output includes `PaperMod`, `https://pages.zcq100.com/`, and `zcq100技术博客`.
 
 - [ ] **Step 5: Commit base Hugo setup**
 
@@ -556,7 +556,7 @@ def main() -> int:
         require(path)
 
     require_contains("hugo.toml", 'theme = "PaperMod"')
-    require_contains("hugo.toml", 'baseURL = "https://blog.zcq100.com/"')
+    require_contains("hugo.toml", 'baseURL = "https://pages.zcq100.com/"')
 
     public = ROOT / "public"
     if public.exists():
@@ -894,7 +894,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-This is a Hugo-powered personal technical blog using the PaperMod theme. The site is published at `https://blog.zcq100.com/` and uses Chinese locale (`zh-CN`). Content is primarily Markdown posts under `content/posts/`, with PaperMod providing homepage, taxonomy, archive, search, RSS, sitemap, and SEO behavior.
+This is a Hugo-powered personal technical blog using the PaperMod theme. The site is published at `https://pages.zcq100.com/` and uses Chinese locale (`zh-CN`). Content is primarily Markdown posts under `content/posts/`, with PaperMod providing homepage, taxonomy, archive, search, RSS, sitemap, and SEO behavior.
 
 ## Common commands
 
@@ -940,7 +940,7 @@ Create `README.md` with:
 
 这是使用 Hugo + PaperMod 构建的个人技术博客。
 
-访问地址：<https://blog.zcq100.com/>
+访问地址：<https://pages.zcq100.com/>
 
 ## 本地预览
 

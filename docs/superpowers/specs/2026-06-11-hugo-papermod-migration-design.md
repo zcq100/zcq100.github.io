@@ -111,7 +111,7 @@ Hugo 配置应尽量保留旧文章 URL。实现前需要确认当前 Jekyll 实
 
 基础 SEO 配置：
 
-- `baseURL = "https://blog.zcq100.com/"`
+- `baseURL = "https://pages.zcq100.com/"`
 - `languageCode = "zh-CN"`
 - 设置站点标题和描述。
 - 启用 sitemap、RSS、robots.txt。

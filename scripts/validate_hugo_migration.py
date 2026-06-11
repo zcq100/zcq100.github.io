@@ -46,7 +46,7 @@ def main() -> int:
         require(path)
 
     require_contains("hugo.toml", 'theme = "PaperMod"')
-    require_contains("hugo.toml", 'baseURL = "https://blog.zcq100.com/"')
+    require_contains("hugo.toml", 'baseURL = "https://pages.zcq100.com/"')
 
     public = ROOT / "public"
     if public.exists():
