@@ -159,7 +159,6 @@ languageCode = "zh-CN"
 title = "zcq100技术博客"
 theme = "PaperMod"
 timeZone = "Asia/Shanghai"
-defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true
