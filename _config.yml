@@ -1,34 +1,17 @@
 # Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 locale: 'zh-CN'
-title: '@-@'
+title: 'zcq100技术博客'
 # masthead_title: "My Custom Title"
 email: m@zcq100.com
 github_username:  zcq100
-url: "https://blog.zcq100.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-description: > 
-  This is my blog
+url: "https://blog.zcq100.com"
+baseurl: ""
+description: >
+  Python、Linux、Docker、AI开发、网络与自动化运维实践
 
 include: ["_pages"]
 
-
-#默认值
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -41,7 +24,6 @@ defaults:
       related: true
       author_profile: true
 
-  # tags
   - scope:
       path: ""
       type: tag
@@ -49,7 +31,6 @@ defaults:
       author_profile: true
       comments: false
 
-  # pages
   - scope:
       path: ""
       type: pages
@@ -64,6 +45,7 @@ category_archive:
 tag_archive:
   type: jekyll-archives
   path: /tags/
+
 jekyll-archives:
   enabled:
     - categories
@@ -75,17 +57,15 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-
 date_format: "%Y-%m-%d"
 timezone: Asia/Shanghai
 search: true
 
-
 author:
-  name     : "zcq100"
-  avatar   : "/assets/images/avatar.jpg"
-  bio      : "My awesome biography constrained to a sentence or two goes here."
-  location : "China"
+  name: "zcq100"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Python开发者，专注AI工程化、Linux运维与自动化开发"
+  location: "China"
 
 footer:
   links:
@@ -93,24 +73,11 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/zcq100"
 
-
-#html压缩？
-# compress_html:
-#   clippings: all
-#   ignore:
-    # envs: development  # disable compression in dev environment
-
-# theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "contrast"
 
-
-# excerpt_separator: ""
-
-#分页
 paginate: 5
 paginate_path: "/page:num/"
-
 
 plugins:
   - jekyll-feed
@@ -118,34 +85,9 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
 exclude:
   - Gemfile
   - Gemfile.lock
-
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-# minima:
-#   date_format: "%Y年 %m月 %d日"
 
 comments:
   provider: 'disqus'
