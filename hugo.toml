@@ -7,7 +7,9 @@ hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true
 summaryLength = 120
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
